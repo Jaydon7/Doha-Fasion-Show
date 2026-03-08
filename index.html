@@ -981,10 +981,20 @@
     /* SHOW DATES */
     .show-dates-section { padding: 60px 20px; }
     .show-dates-inner { padding: 0; }
-    .event-item { grid-template-columns: 80px 1fr auto; gap: 16px; padding: 24px 0; }
-    .event-date-num { font-size: 2.2rem; }
-    .event-name { font-size: 1.1rem; }
-    .event-tag { font-size: 0.45rem; padding: 5px 10px; }
+    .event-item { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 8px; 
+      padding: 20px 0; 
+      align-items: flex-start;
+    }
+    .event-divider { display: none; }
+    .event-date { text-align: left; display: flex; align-items: baseline; gap: 8px; }
+    .event-date-num { font-size: 2rem; }
+    .event-date-month { font-size: 0.6rem; letter-spacing: 0.2em; }
+    .event-name { font-size: 1.2rem; margin-bottom: 4px; }
+    .event-venue { font-size: 0.6rem; }
+    .event-tag { font-size: 0.5rem; padding: 5px 12px; margin-top: 6px; }
     .section-title { font-size: clamp(2rem, 8vw, 3rem); }
 
     /* ABOUT */
@@ -1225,7 +1235,7 @@ function triggerArabicTranslate() {
     <!-- DESIGNERS -->
     <div class="gateway-card reveal" id="designers">
       <div class="gateway-card-bg"></div>
-      <div class="gateway-card-img" style="background-image:url('./images/img_05.jpg')"></div>
+      <div class="gateway-card-img" style="background-image:url('./images/img_05.jpg');background-position:center 15%"></div>
       <div class="gateway-card-overlay"></div>
       <div class="gateway-card-content">
         <span class="gateway-card-num">01</span>
@@ -1253,7 +1263,7 @@ function triggerArabicTranslate() {
     <!-- SHOW DATES -->
     <div class="gateway-card reveal">
       <div class="gateway-card-bg"></div>
-      <div class="gateway-card-img" style="background-image:url('./images/card-showdates.jpg')"></div>
+      <div class="gateway-card-img" style="background-image:url('./images/card-showdates.jpg');background-position:center 15%"></div>
       <div class="gateway-card-overlay"></div>
       <div class="gateway-card-content">
         <span class="gateway-card-num">03</span>
@@ -1281,7 +1291,7 @@ function triggerArabicTranslate() {
     <!-- MEDIA -->
     <div class="gateway-card reveal" id="media">
       <div class="gateway-card-bg"></div>
-      <div class="gateway-card-img" style="background-image:url('./images/gold-dress.png')"></div>
+      <div class="gateway-card-img" style="background-image:url('./images/gold-dress.png');background-position:center 10%"></div>
       <div class="gateway-card-overlay"></div>
       <div class="gateway-card-content">
         <span class="gateway-card-num">05</span>
