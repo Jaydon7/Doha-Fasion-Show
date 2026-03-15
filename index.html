@@ -956,6 +956,7 @@
   @media (max-width: 768px) {
     /* CURSOR */
     .cursor-dot, .cursor-ring { display: none; }
+    #cursor, #cursorRing { display: none !important; }
 
     /* NAV */
     nav { padding: 16px 20px; }
@@ -1678,9 +1679,11 @@ function triggerArabicTranslate() {
 </footer>
 
 <script>
-  // Custom cursor
+  // Custom cursor — disable on touch devices
+  const isTouchDevice = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
+  if (isTouchDevice) { if(cursor) cursor.style.display='none'; if(ring) ring.style.display='none'; }
   document.addEventListener('mousemove', e => {
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
